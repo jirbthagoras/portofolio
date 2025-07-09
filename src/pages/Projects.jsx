@@ -2,7 +2,11 @@ const ProjectCard = ({ title, description, tags, image, link }) => {
   return (
     <div className="bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-700 overflow-hidden">
       <div className="aspect-video bg-slate-100 dark:bg-slate-800 overflow-hidden">
-        <img src={image || "/placeholder.svg"} alt={title} className="w-full h-full object-cover" />
+        <img
+          src={image || "/placeholder.svg"}
+          alt={title}
+          className="w-full h-full object-cover"
+        />
       </div>
       <div className="p-6">
         <h3 className="text-xl font-semibold mb-2 text-white">{title}</h3>
@@ -31,45 +35,130 @@ const ProjectCard = ({ title, description, tags, image, link }) => {
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M14 5l7 7m0 0l-7 7m7-7H3"
+            ></path>
           </svg>
         </a>
       </div>
     </div>
-  )
-}
+  );
+};
 
 const Projects = () => {
   const projects = [
     {
-      title: "E-commerce Platform",
-      description: "A full-featured online store with product catalog, shopping cart, and secure checkout process.",
-      tags: ["React", "Node.js", "MongoDB", "Stripe"],
+      title: "Webversal",
+      description: "A pure PHP project that serves as a CRM",
+      tags: ["PHP", "Midtrans", "Git", "MySQL"],
       image: "/placeholder.svg?height=200&width=400",
-      link: "#",
+      link: "https://github.com/jirbthagoras/Project-Based-Learning-Webversal-.git",
     },
     {
-      title: "Task Management App",
-      description: "A collaborative task management tool with real-time updates and team collaboration features.",
-      tags: ["React", "Firebase", "Tailwind CSS", "Redux"],
+      title: "Emloyee attendance application",
+      description:
+        "Fullstack Laravel project. Digitalize your workplace attendance system!",
+      tags: ["MySQL", "Livewire", "Laravel", "PHP"],
       image: "/placeholder.svg?height=200&width=400",
-      link: "#",
+      link: "https://github.com/jirbthagoras/employee-attendance.git",
     },
     {
-      title: "Weather Dashboard",
-      description: "A weather application that provides current conditions and forecasts for locations worldwide.",
-      tags: ["React", "OpenWeather API", "Chart.js", "Geolocation"],
+      title: "Setory: let's learn history",
+      description:
+        "A fullstack laravel application packed up with TailwindCSS, this project is dedicated for Techomfest 2024-2025",
+      tags: ["Laravel", "Livewire", "Filament", "TailwindCSS", "MySQL"],
       image: "/placeholder.svg?height=200&width=400",
-      link: "#",
+      link: "https://github.com/jirbthagoras/setory.git",
     },
     {
-      title: "Portfolio Website",
-      description: "A documentation-style portfolio website built with React and Tailwind CSS.",
-      tags: ["React", "Tailwind CSS", "React Router"],
+      title: "MentAI",
+      description:
+        "React + Firebase application integrated with AI. In this project, we learn about how to integrate and utilize AI technology to help Mental Health Recovery",
+      tags: ["JavaScript", "Firebase", "React", "React Router"],
       image: "/placeholder.svg?height=200&width=400",
-      link: "#",
+      link: "https://github.com/jirbthagoras/Ment-Ai.git",
     },
-  ]
+    {
+      title: "LeafStyle",
+      description:
+        "A lifectyle-changer app that have so much feature like marketplace, ai-based scanning, gamification and so much more.",
+      tags: ["TypesScript", "Firebase", "NextJS", "TailwindCSS"],
+      image: "/placeholder.svg?height=200&width=400",
+      link: "https://github.com/jirbthagoras/leafstyle.git",
+    },
+    {
+      title: "Job-board API service",
+      description:
+        "API service built with laravel. Search for Job easier with Job-Board",
+      tags: ["Laravel", "PostgreSQL", "Eloquent", "JWT", "Swagger API docs"],
+      image:
+        "https://github.com/jirbthagoras/leafstyle.git/placeholder.svg?height=200&width=400",
+      link: "https://github.com/jirbthagoras/laravel-job-board-webservice.git",
+    },
+    {
+      title: "Event Management API Service: GoVent",
+      description: "An Event Management API service written in Golang stdlib",
+      tags: [
+        "MySQL",
+        "GoLang",
+        "Swagger API docs",
+        "Golang Dependency Injector",
+        "Layered Architecture",
+      ],
+      image: "/placeholder.svg?height=200&width=400",
+      link: "https://github.com/jirbthagoras/event-management.git",
+    },
+    {
+      title: "Hon: Literacy Tracker App",
+      description:
+        "Literacy tracker app with feature like Goal Chaser and Email sender using RabbitMQ delayed message",
+      tags: ["Docker", "RabbitMQ", "MySQL", "GoFiber", "GoLang", "JWT"],
+      image: "/placeholder.svg?height=200&width=400",
+      link: "https://github.com/jirbthagoras/leafstyle.git",
+    },
+    {
+      title: "ChatsO: tcp based chat APP",
+      description:
+        "TCP based chat with feature like room, message, whisper, and nickname.",
+      tags: ["GoLang", "Goroutine"],
+      image: "/placeholder.svg?height=200&width=400",
+      link: "https://github.com/jirbthagoras/tcp-chat.git",
+    },
+    {
+      title: "Nutrize: nutrition recommendation API service",
+      description:
+        "An API service made for CodingCamp Capstone project. Integrated with Gemini AI",
+      tags: [
+        "ExpressJS",
+        "TypeScript",
+        "Prisma",
+        "JWT",
+        "Docker",
+        "PostgreSQL",
+      ],
+      image: "/placeholder.svg?height=200&width=400",
+      link: "https://github.com/jirbthagoras/nutrition-recipe-be.git",
+    },
+    {
+      title: "Pemilos Backend",
+      description:
+        "Pemilos API service that requires reliability, and data integration",
+      tags: [
+        "Redis",
+        "TypeScript",
+        "MongoDB",
+        "ExpressJS",
+        "Mongoose",
+        "Pusher",
+        "Docker",
+      ],
+      image: "/placeholder.svg?height=200&width=400",
+      link: "https://github.com/jirbthagoras/pemilos-backend.git",
+    },
+  ];
 
   return (
     <div className="space-y-8 font-mono">
@@ -80,8 +169,8 @@ const Projects = () => {
 
       <section className="prose dark:prose-invert max-w-none">
         <p className="text-lg">
-          Browse through my recent projects. Each project demonstrates different skills and technologies I've worked
-          with.
+          Browse through my recent projects. Each project demonstrates different
+          skills and technologies I've worked with.
         </p>
       </section>
 
@@ -112,7 +201,7 @@ const Projects = () => {
         </div>
       </section>
     </div>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;
