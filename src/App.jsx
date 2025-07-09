@@ -1,21 +1,21 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
-import Sidebar from "./components/Sidebar"
-import Header from "./components/Header"
-import Introduction from "./pages/Introduction"
-import Projects from "./pages/Projects"
-import Skills from "./pages/Skills"
-import Contact from "./pages/Contact"
-import "./index.css"
+import { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Sidebar from "./components/Sidebar";
+import Header from "./components/Header";
+import Introduction from "./pages/Introduction";
+import Projects from "./pages/Projects";
+import Skills from "./pages/Skills";
+import Contact from "./pages/Contact";
+import "./index.css";
 
 function App() {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(window.innerWidth >= 768)
+  const [isSidebarOpen, setIsSidebarOpen] = useState(window.innerWidth >= 768);
 
   const toggleSidebar = () => {
-    setIsSidebarOpen(!isSidebarOpen)
-  }
+    setIsSidebarOpen(!isSidebarOpen);
+  };
 
   return (
     <Router>
@@ -31,15 +31,21 @@ function App() {
                 <Route path="/skills" element={<Skills />} />
                 <Route path="/contact" element={<Contact />} />
                 {/* Add placeholder routes for the new sidebar items */}
-                <Route path="/installation" element={<PlaceholderPage title="Installation" />} />
-                <Route path="/quickstart" element={<PlaceholderPage title="Quick Start" />} />
+                <Route
+                  path="/installation"
+                  element={<PlaceholderPage title="Installation" />}
+                />
+                <Route
+                  path="/quickstart"
+                  element={<PlaceholderPage title="Quick Start" />}
+                />
               </Routes>
             </div>
           </main>
         </div>
       </div>
     </Router>
-  )
+  );
 }
 
 // Placeholder component for new routes
@@ -51,10 +57,13 @@ const PlaceholderPage = ({ title }) => {
         <div className="h-1 w-24 bg-blue-600"></div>
       </div>
       <section className="prose dark:prose-invert max-w-none">
-        <p className="text-lg">This is a placeholder page for the {title} section. Content will be added here.</p>
+        <p className="text-lg">
+          This is a placeholder page for the {title} section. Content will be
+          added here.
+        </p>
       </section>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
