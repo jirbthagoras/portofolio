@@ -1,3 +1,5 @@
+import profilePhoto from "../assets/saya.jpeg";
+
 const Introduction = () => {
   return (
     <div className="space-y-8">
@@ -38,8 +40,8 @@ jirb.StartCode(":*")
         <div className="w-full md:w-1/3">
           <div className="flex justify-center">
             <img
-              src="../assets/saya.jpeg"
-              alt="Jabriel Hans Talula"
+              src={profilePhoto}
+              alt="Foto Profil"
               className="w-64 h-64 rounded-full mb-4 object-cover border-4 border-white shadow"
             />
           </div>{" "}
