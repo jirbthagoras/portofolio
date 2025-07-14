@@ -1,4 +1,4 @@
-import profilePhoto from "../assets/saya.jpeg";
+import profilePhoto from "../assets/profile.jpeg";
 
 const Introduction = () => {
   return (
@@ -17,21 +17,20 @@ const Introduction = () => {
               Welcome to my <strong>Documentation</strong>
             </p>
             <p>
-              My name is Jabriel Hans Talula, I'm a Software Engineer that
-              specialize in Backend side development.
-              <br></br> <strong>Lead Software Engineer</strong>
+              My name is Jabriel Hans Talula, I'm a Backend Developer that
+              currently enrolled at SMK Negeri 8 Semarang, and I'm aiming to
+              become a <strong>Software Engineer</strong> <br /> <br /> I have a
+              passion to make this world a better place through my code, isn't
+              it amazing? Making a <strong>huge</strong> impact from just a line
+              of code!
             </p>
           </section>
 
           <section className="space-y-4">
-            <h2 className="text-2xl font-semibold font-mono">QuickStart</h2>
+            <h2 className="text-2xl font-semibold font-mono">Quotes</h2>
             <div className="bg-slate-100 dark:bg-slate-800 p-4 rounded-md">
-              <pre className="font-mono text-white text-sm overflow-x-auto">
-                <code className="font-bold">{`jirb := newJirbService(&gorengan);
-// Init a gorengan Object first before start the App
-jirb.StartCode(":*")
-// You can adjust the port via PORT in ENV settings
-`}</code>
+              <pre className="font-mono italic text-white text-sm overflow-x-auto">
+                <code className="font-bold">{`"Don't observe the world inside a magnifier"`}</code>
               </pre>
             </div>
           </section>
@@ -50,7 +49,7 @@ jirb.StartCode(":*")
               Jabriel Hans Talula
             </h3>
             <p className="text-center text-slate-600 dark:text-slate-400 font-mono">
-              Software Engineer
+              Software Engineer Backend Specialization FullStack Developer
             </p>
             <div className="mt-4 flex justify-center space-x-3">
               <a

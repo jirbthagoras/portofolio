@@ -1,8 +1,21 @@
-"use client"
-import { Link } from "react-router-dom"
-import { Moon, Sun, ExternalLink, Menu, X, Github, BookOpen } from "lucide-react"
+"use client";
+import { Link } from "react-router-dom";
+import {
+  Moon,
+  Sun,
+  ExternalLink,
+  Menu,
+  X,
+  Github,
+  BookOpen,
+} from "lucide-react";
 
-const Header = ({ toggleSidebar, isSidebarOpen, isDarkMode, toggleDarkMode }) => {
+const Header = ({
+  toggleSidebar,
+  isSidebarOpen,
+  isDarkMode,
+  toggleDarkMode,
+}) => {
   return (
     <header className="font-mono sticky top-0 z-50 w-full border-b border-slate-200 bg-white dark:border-slate-700 dark:bg-slate-900 shadow-sm">
       <div className="flex h-16 items-center px-4 md:px-6">
@@ -12,14 +25,20 @@ const Header = ({ toggleSidebar, isSidebarOpen, isDarkMode, toggleDarkMode }) =>
             className="md:hidden p-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-white"
             aria-label="Toggle menu"
           >
-            {isSidebarOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            {isSidebarOpen ? (
+              <X className="h-5 w-5" />
+            ) : (
+              <Menu className="h-5 w-5" />
+            )}
           </button>
 
           <Link to="/" className="flex items-center gap-2">
             <div className="h-8 w-8 rounded-md bg-blue-600 flex items-center justify-center text-white font-bold">
               <BookOpen className="h-4 w-4" />
             </div>
-            <span className="font-bold text-xl hidden md:inline-block text-slate-900 dark:text-white">JirbDocs</span>
+            <span className="font-bold text-xl hidden md:inline-block text-slate-900 dark:text-white">
+              JirbDocs
+            </span>
           </Link>
         </div>
 
@@ -58,7 +77,7 @@ const Header = ({ toggleSidebar, isSidebarOpen, isDarkMode, toggleDarkMode }) =>
         </div>
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

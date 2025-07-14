@@ -1,10 +1,16 @@
+import webversal from "../assets/project/webversal.jpeg";
+import setory from "../assets/project/setory.jpeg";
+import mentai from "../assets/project/mentai.png";
+import leafstyle from "../assets/project/leafstyle.png";
+
 const ProjectCard = ({ title, description, tags, image, link }) => {
+  console.log(image);
   return (
     <div className="bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-700 overflow-hidden">
       <div className="aspect-video bg-slate-100 dark:bg-slate-800 overflow-hidden">
         <img
-          src={image || "/placeholder.svg"}
-          alt={title}
+          src={image}
+          alt="No Image Available"
           className="w-full h-full object-cover"
         />
       </div>
@@ -54,7 +60,7 @@ const Projects = () => {
       title: "Webversal",
       description: "A pure PHP project that serves as a CRM",
       tags: ["PHP", "Midtrans", "Git", "MySQL"],
-      image: "/placeholder.svg?height=200&width=400",
+      image: webversal,
       link: "https://github.com/jirbthagoras/Project-Based-Learning-Webversal-.git",
     },
     {
@@ -70,7 +76,7 @@ const Projects = () => {
       description:
         "A fullstack laravel application packed up with TailwindCSS, this project is dedicated for Techomfest 2024-2025",
       tags: ["Laravel", "Livewire", "Filament", "TailwindCSS", "MySQL"],
-      image: "/placeholder.svg?height=200&width=400",
+      image: setory,
       link: "https://github.com/jirbthagoras/setory.git",
     },
     {
@@ -78,7 +84,7 @@ const Projects = () => {
       description:
         "React + Firebase application integrated with AI. In this project, we learn about how to integrate and utilize AI technology to help Mental Health Recovery",
       tags: ["JavaScript", "Firebase", "React", "React Router"],
-      image: "/placeholder.svg?height=200&width=400",
+      image: mentai,
       link: "https://github.com/jirbthagoras/Ment-Ai.git",
     },
     {
@@ -86,7 +92,7 @@ const Projects = () => {
       description:
         "A lifectyle-changer app that have so much feature like marketplace, ai-based scanning, gamification and so much more.",
       tags: ["TypesScript", "Firebase", "NextJS", "TailwindCSS"],
-      image: "/placeholder.svg?height=200&width=400",
+      image: leafstyle,
       link: "https://github.com/jirbthagoras/leafstyle.git",
     },
     {
@@ -143,10 +149,11 @@ const Projects = () => {
       link: "https://github.com/jirbthagoras/nutrition-recipe-be.git",
     },
     {
-      title: "Pemilos Backend",
+      title: "Pemilos",
       description:
-        "Pemilos API service that requires reliability, and data integration",
+        "I made an Pemilos API service that requires reliability, and data integration",
       tags: [
+        "JWT",
         "Redis",
         "TypeScript",
         "MongoDB",
