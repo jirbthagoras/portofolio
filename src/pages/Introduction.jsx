@@ -38,7 +38,7 @@ jirb.StartCode(":*")
         <div className="w-full md:w-1/3">
           <div className="flex justify-center">
             <img
-              src="../../public/saya.jpeg"
+              src="../assets/saya.jpeg"
               alt="Jabriel Hans Talula"
               className="w-64 h-64 rounded-full mb-4 object-cover border-4 border-white shadow"
             />

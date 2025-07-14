@@ -107,10 +107,12 @@ const Skills = () => {
   "CICD": [
     "GitHub Actions Workflow",
   ],
-  "cloud": [
+  "Cloud Service": [
     "AWS",
+  ],
+  "Automation": {
     "HashiCorp's Terraform"
-  ]
+  }
 }`;
 
   const messageBrokers = `{
