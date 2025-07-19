@@ -49,7 +49,7 @@ const Introduction = () => {
               Jabriel Hans Talula
             </h3>
             <p className="text-center text-slate-600 dark:text-slate-400 font-mono">
-              Software Engineer Backend Specialization FullStack Developer
+              Software Engineer | Backend Specialization | FullStack Developer
             </p>
             <div className="mt-4 flex justify-center space-x-3">
               <a
