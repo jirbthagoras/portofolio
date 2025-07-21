@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { useState, useEffect, useRef } from "react"
-import { NavLink } from "react-router-dom"
+import { useState, useEffect, useRef } from "react";
+import { NavLink } from "react-router-dom";
 import {
   ChevronDown,
   ChevronRight,
@@ -17,47 +17,53 @@ import {
   Server,
   Database,
   Terminal,
-} from "lucide-react"
+  Album,
+} from "lucide-react";
 
 const Sidebar = ({ isOpen, setIsOpen }) => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768)
-  const [searchQuery, setSearchQuery] = useState("")
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [searchQuery, setSearchQuery] = useState("");
   const [expandedSections, setExpandedSections] = useState({
     gettingStarted: true,
     projects: false,
     skills: false,
     api: false,
-  })
-  const sidebarRef = useRef(null)
+  });
+  const sidebarRef = useRef(null);
 
   useEffect(() => {
     const handleResize = () => {
-      const mobile = window.innerWidth < 768
-      setIsMobile(mobile)
-      if (!mobile && !isOpen) setIsOpen(true)
-    }
+      const mobile = window.innerWidth < 768;
+      setIsMobile(mobile);
+      if (!mobile && !isOpen) setIsOpen(true);
+    };
 
     const handleClickOutside = (event) => {
-      if (isMobile && isOpen && sidebarRef.current && !sidebarRef.current.contains(event.target)) {
-        setIsOpen(false)
+      if (
+        isMobile &&
+        isOpen &&
+        sidebarRef.current &&
+        !sidebarRef.current.contains(event.target)
+      ) {
+        setIsOpen(false);
       }
-    }
+    };
 
-    window.addEventListener("resize", handleResize)
-    document.addEventListener("mousedown", handleClickOutside)
+    window.addEventListener("resize", handleResize);
+    document.addEventListener("mousedown", handleClickOutside);
 
     return () => {
-      window.removeEventListener("resize", handleResize)
-      document.removeEventListener("mousedown", handleClickOutside)
-    }
-  }, [isMobile, isOpen, setIsOpen])
+      window.removeEventListener("resize", handleResize);
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isMobile, isOpen, setIsOpen]);
 
   const toggleSection = (section) => {
     setExpandedSections((prev) => ({
       ...prev,
       [section]: !prev[section],
-    }))
-  }
+    }));
+  };
 
   const mainNavItems = [
     {
@@ -67,7 +73,11 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
       items: [
         // { path: "/", label: "Introduction", icon: <User className="h-4 w-4" /> },
         // { path: "/installation", label: "Installation", icon: <Package className="h-4 w-4" /> },
-        { path: "/", label: "Quick Start", icon: <Terminal className="h-4 w-4" /> },
+        {
+          path: "/",
+          label: "Quick Start",
+          icon: <Terminal className="h-4 w-4" />,
+        },
       ],
     },
     {
@@ -75,7 +85,11 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
       label: "Projects",
       icon: <Code className="h-5 w-5" />,
       items: [
-        { path: "/projects", label: "Overview", icon: <FileText className="h-4 w-4" /> },
+        {
+          path: "/projects",
+          label: "Overview",
+          icon: <FileText className="h-4 w-4" />,
+        },
         // { path: "/projects/web", label: "Web Projects", icon: <Globe className="h-4 w-4" /> },
         // { path: "/projects/api", label: "API Projects", icon: <Server className="h-4 w-4" /> },
       ],
@@ -85,32 +99,60 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
       label: "Skills",
       icon: <Briefcase className="h-5 w-5" />,
       items: [
-        { path: "/skills", label: "Overview", icon: <FileText className="h-4 w-4" /> },
+        {
+          path: "/skills",
+          label: "Overview",
+          icon: <FileText className="h-4 w-4" />,
+        },
         // { path: "/skills/golang", label: "Golang", icon: <Code className="h-4 w-4" /> },
         // { path: "/skills/typescript", label: "TypeScript", icon: <Code className="h-4 w-4" /> },
       ],
     },
-  ]
+    {
+      id: "certification",
+      label: "certification",
+      icon: <Album className="h-4 w-4" />,
+      items: [
+        {
+          path: "/certifications",
+          label: "Overview",
+          icon: <FileText className="h-4 w-4" />,
+        },
+        // { path: "/skills/golang", label: "Golang", icon: <Code className="h-4 w-4" /> },
+        // { path: "/skills/typescript", label: "TypeScript", icon: <Code className="h-4 w-4" /> },
+      ],
+    },
+  ];
 
   const utilityNavItems = [
     // { path: "/contact", label: "Contact", icon: <Mail className="h-5 w-5" /> },
-    { path: "https://github.com/jirbthagoras", label: "GitHub", icon: <Github className="h-5 w-5" />, external: true },
-  ]
+    {
+      path: "https://github.com/jirbthagoras",
+      label: "GitHub",
+      icon: <Github className="h-5 w-5" />,
+      external: true,
+    },
+  ];
 
   const filteredNavItems = searchQuery
     ? mainNavItems
         .map((section) => ({
           ...section,
-          items: section.items.filter((item) => item.label.toLowerCase().includes(searchQuery.toLowerCase())),
+          items: section.items.filter((item) =>
+            item.label.toLowerCase().includes(searchQuery.toLowerCase()),
+          ),
         }))
         .filter((section) => section.items.length > 0)
-    : mainNavItems
+    : mainNavItems;
 
   return (
     <>
       {/* Overlay for mobile */}
       {isMobile && isOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden" onClick={() => setIsOpen(false)} />
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
+          onClick={() => setIsOpen(false)}
+        />
       )}
 
       {/* Sidebar */}
@@ -158,7 +200,9 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
                   >
                     <div className="flex items-center">
                       <span className="mr-3">{section.icon}</span>
-                      {isOpen && <span className="font-medium">{section.label}</span>}
+                      {isOpen && (
+                        <span className="font-medium">{section.label}</span>
+                      )}
                     </div>
                     {isOpen && (
                       <span className="transform transition-transform duration-200">
@@ -252,8 +296,8 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
         </div>
       </aside>
     </>
-  )
-}
+  );
+};
 
 // Add missing icon
 const Globe = (props) => (
@@ -273,7 +317,7 @@ const Globe = (props) => (
     <line x1="2" y1="12" x2="22" y2="12" />
     <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
   </svg>
-)
+);
 
 // Add missing icon
 const Lock = (props) => (
@@ -292,6 +336,6 @@ const Lock = (props) => (
     <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
     <path d="M7 11V7a5 5 0 0 1 10 0v4" />
   </svg>
-)
+);
 
-export default Sidebar
+export default Sidebar;

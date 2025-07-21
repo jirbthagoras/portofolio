@@ -8,6 +8,7 @@ import Introduction from "./pages/Introduction";
 import Projects from "./pages/Projects";
 import Skills from "./pages/Skills";
 import Contact from "./pages/Contact";
+import Certs from "./pages/Certs.jsx";
 import "./index.css";
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
                 <Route path="/" element={<Introduction />} />
                 <Route path="/projects" element={<Projects />} />
                 <Route path="/skills" element={<Skills />} />
+                <Route path="/certifications" element={<Certs />} />
                 <Route path="/contact" element={<Contact />} />
                 {/* Add placeholder routes for the new sidebar items */}
                 <Route

@@ -2,9 +2,9 @@ import webversal from "../assets/project/webversal.jpeg";
 import setory from "../assets/project/setory.jpeg";
 import mentai from "../assets/project/mentai.png";
 import leafstyle from "../assets/project/leafstyle.png";
+import notAvail from "../assets/na.jpg";
 
 const ProjectCard = ({ title, description, tags, image, link }) => {
-  console.log(image);
   return (
     <div className="bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-700 overflow-hidden">
       <div className="aspect-video bg-slate-100 dark:bg-slate-800 overflow-hidden">
@@ -64,11 +64,11 @@ const Projects = () => {
       link: "https://github.com/jirbthagoras/Project-Based-Learning-Webversal-.git",
     },
     {
-      title: "Emloyee attendance application",
+      title: "Employee attendance application",
       description:
         "Fullstack Laravel project. Digitalize your workplace attendance system!",
       tags: ["MySQL", "Livewire", "Laravel", "PHP"],
-      image: "/placeholder.svg?height=200&width=400",
+      image: notAvail,
       link: "https://github.com/jirbthagoras/employee-attendance.git",
     },
     {
@@ -100,8 +100,7 @@ const Projects = () => {
       description:
         "API service built with laravel. Search for Job easier with Job-Board",
       tags: ["Laravel", "PostgreSQL", "Eloquent", "JWT", "Swagger API docs"],
-      image:
-        "https://github.com/jirbthagoras/leafstyle.git/placeholder.svg?height=200&width=400",
+      image: notAvail,
       link: "https://github.com/jirbthagoras/laravel-job-board-webservice.git",
     },
     {
@@ -114,7 +113,7 @@ const Projects = () => {
         "Golang Dependency Injector",
         "Layered Architecture",
       ],
-      image: "/placeholder.svg?height=200&width=400",
+      image: notAvail,
       link: "https://github.com/jirbthagoras/event-management.git",
     },
     {
@@ -122,7 +121,7 @@ const Projects = () => {
       description:
         "Literacy tracker app with feature like Goal Chaser and Email sender using RabbitMQ delayed message",
       tags: ["Docker", "RabbitMQ", "MySQL", "GoFiber", "GoLang", "JWT"],
-      image: "/placeholder.svg?height=200&width=400",
+      image: notAvail,
       link: "https://github.com/jirbthagoras/leafstyle.git",
     },
     {
@@ -130,7 +129,7 @@ const Projects = () => {
       description:
         "TCP based chat with feature like room, message, whisper, and nickname.",
       tags: ["GoLang", "Goroutine"],
-      image: "/placeholder.svg?height=200&width=400",
+      image: notAvail,
       link: "https://github.com/jirbthagoras/tcp-chat.git",
     },
     {
@@ -145,7 +144,7 @@ const Projects = () => {
         "Docker",
         "PostgreSQL",
       ],
-      image: "/placeholder.svg?height=200&width=400",
+      image: notAvail,
       link: "https://github.com/jirbthagoras/nutrition-recipe-be.git",
     },
     {
@@ -162,7 +161,7 @@ const Projects = () => {
         "Pusher",
         "Docker",
       ],
-      image: "/placeholder.svg?height=200&width=400",
+      image: notAvail,
       link: "https://github.com/jirbthagoras/pemilos-backend.git",
     },
   ];
