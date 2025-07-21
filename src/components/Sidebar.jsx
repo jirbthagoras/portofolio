@@ -4,6 +4,8 @@ import { useState, useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import {
   ChevronDown,
+  FileCog,
+  Cpu,
   ChevronRight,
   Code,
   User,
@@ -88,7 +90,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
         {
           path: "/projects",
           label: "projects",
-          icon: <FileText className="h-4 w-4" />,
+          icon: <FileCog className="h-4 w-4" />,
         },
         // { path: "/projects/web", label: "Web Projects", icon: <Globe className="h-4 w-4" /> },
         // { path: "/projects/api", label: "API Projects", icon: <Server className="h-4 w-4" /> },
@@ -102,7 +104,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
         {
           path: "/skills",
           label: "technologies",
-          icon: <FileText className="h-4 w-4" />,
+          icon: <Cpu className="h-4 w-4" />,
         },
         // { path: "/skills/golang", label: "Golang", icon: <Code className="h-4 w-4" /> },
         // { path: "/skills/typescript", label: "TypeScript", icon: <Code className="h-4 w-4" /> },
