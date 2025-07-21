@@ -149,10 +149,10 @@ const Skills = () => {
         >
           <SkillSection
             title="core"
-            items={["api-dev", "fullstack"]}
+            items={["API Development", "FullStack"]}
             color="blue"
           />
-          <SkillSection title="frameworks" items={["laravel"]} color="green" />
+          <SkillSection title="frameworks" items={["Laravel"]} color="green" />
           <SkillSection
             title="ecosystem"
             items={["laravel-tools"]}

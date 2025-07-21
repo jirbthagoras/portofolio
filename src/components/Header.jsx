@@ -37,26 +37,9 @@ const Header = ({
               <BookOpen className="h-4 w-4" />
             </div>
             <span className="font-bold text-xl hidden md:inline-block text-slate-900 dark:text-white">
-              JirbDocs
+              DevDocs
             </span>
           </Link>
-        </div>
-
-        <div className="flex-1 flex justify-center px-4 hidden md:flex">
-          <div className="w-full max-w-lg">
-            <div className="relative">
-              <input
-                type="text"
-                placeholder="Search documentation..."
-                className="w-full pl-4 pr-10 py-1.5 text-sm bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white dark:focus:bg-slate-800 text-slate-900 dark:text-white"
-              />
-              <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-                <kbd className="hidden sm:inline-flex h-5 select-none items-center gap-1 rounded border border-slate-200 bg-slate-100 px-1.5 font-mono text-[10px] font-medium text-slate-600 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-400">
-                  ⌘K
-                </kbd>
-              </div>
-            </div>
-          </div>
         </div>
 
         <div className="flex items-center gap-4 ml-auto">
