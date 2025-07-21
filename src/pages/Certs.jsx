@@ -141,7 +141,7 @@ const Certifications = () => {
     <div className="space-y-8 animate-fadeIn">
       {/* Header */}
       <div className="space-y-2">
-        <h1 className="text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100">
+        <h1 className="text-4xl font-mono font-bold tracking-tight text-slate-900 dark:text-slate-100">
           Certifications & Qualifications
         </h1>
         <div className="h-1 w-24 bg-blue-600"></div>

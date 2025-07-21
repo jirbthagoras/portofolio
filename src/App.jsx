@@ -33,14 +33,6 @@ function App() {
                 <Route path="/certifications" element={<Certs />} />
                 <Route path="/contact" element={<Contact />} />
                 {/* Add placeholder routes for the new sidebar items */}
-                <Route
-                  path="/installation"
-                  element={<PlaceholderPage title="Installation" />}
-                />
-                <Route
-                  path="/quickstart"
-                  element={<PlaceholderPage title="Quick Start" />}
-                />
               </Routes>
             </div>
           </main>

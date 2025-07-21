@@ -94,8 +94,8 @@ const Skills = () => {
   return (
     <div className="space-y-8 animate-fadeIn">
       <div className="space-y-2">
-        <h1 className="text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100">
-          Skills
+        <h1 className="text-4xl font-mono font-bold tracking-tight text-slate-900 dark:text-slate-100">
+          Technologies
         </h1>
         <div className="h-1 w-24 bg-blue-600"></div>
       </div>
@@ -161,7 +161,7 @@ const Skills = () => {
         </SkillCard>
 
         <SkillCard
-          title="databases"
+          title="Databases"
           icon={<Database className="h-6 w-6 text-slate-500" />}
           delay={250}
           image={database}

@@ -87,7 +87,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
       items: [
         {
           path: "/projects",
-          label: "Overview",
+          label: "projects",
           icon: <FileText className="h-4 w-4" />,
         },
         // { path: "/projects/web", label: "Web Projects", icon: <Globe className="h-4 w-4" /> },
@@ -101,7 +101,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
       items: [
         {
           path: "/skills",
-          label: "Overview",
+          label: "technologies",
           icon: <FileText className="h-4 w-4" />,
         },
         // { path: "/skills/golang", label: "Golang", icon: <Code className="h-4 w-4" /> },
@@ -115,7 +115,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
       items: [
         {
           path: "/certifications",
-          label: "Overview",
+          label: "certifications",
           icon: <FileText className="h-4 w-4" />,
         },
         // { path: "/skills/golang", label: "Golang", icon: <Code className="h-4 w-4" /> },
